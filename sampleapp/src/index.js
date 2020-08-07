@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {  BrowserRouter , Route } from 'react-router-dom';
+import ProductDetails from './Components/ProductDetails';
+import SearchGridComponents from './Components/SearchGridComponents';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    
+      <App />
+      <BrowserRouter>
+         <Route path="/SearchGridComponents" component={SearchGridComponents} />
+         <Route path="/ProductDetails" component={ProductDetails} />
+      </BrowserRouter>
+     
   </React.StrictMode>,
   document.getElementById('root')
 );
